@@ -3,20 +3,20 @@ os: linux
 
 files:
   - source: /index.html
-    destination: /var/www/html/test
+    destination: c:\inetpub\wwwroot\test_site
 
 hooks:
   ApplicationStop:
-    - location: scripts/stop_server
+    - location: scripts/stopsite.bat
       timeout: 300
-      runas: root
+      runas: Administrator
   BeforeInstall:
-    - location: scripts/uninstall
+    - location: scripts/delsite.bat
       timeout: 300
-      runas: root
+      runas: Administrator
   ApplicationStart:
-    - location: scripts/start_server
+    - location: scripts/startsite.bat
       timeout: 300
-      runas: root
+      runas: Administrator
 
 
