@@ -7,15 +7,15 @@ files:
 
 hooks:
   ApplicationStop:
-    - location: scripts/stopsite.bat
+    - location: scripts\stopsite.bat
       timeout: 300
       runas: Administrator
   BeforeInstall:
-    - location: scripts/delsite.bat
+    - location: scripts\delsite.bat
       timeout: 300
       runas: Administrator
   ApplicationStart:
-    - location: scripts/startsite.bat
+    - location: scripts\startsite.bat
       timeout: 300
       runas: Administrator
 
