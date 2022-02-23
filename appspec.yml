@@ -2,8 +2,8 @@ version: 0.0
 os: linux
 
 files:
-  - source: /index.html
-    destination: c:\inetpub\wwwroot\test_site
+  - source: \index.html
+    destination: C:\inetpub\wwwroot\test_site
 
 hooks:
   ApplicationStop:
